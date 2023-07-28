@@ -6,7 +6,7 @@
 .pnp.js
 src/.env
 .env
-
+public/assets/videos
 # testing
 /coverage
 
