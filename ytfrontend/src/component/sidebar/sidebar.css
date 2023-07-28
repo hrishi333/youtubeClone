@@ -1,0 +1,161 @@
+.menu_icon_large{
+    display: none;
+}
+.menu_icon_small{
+    display: flex;
+    flex-direction: column;
+    color: #f2f2f2;
+}
+.display_toggle_on{
+  /*  display: none;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: -250px; !* Initially hide the sidebar off the screen *!
+    transition: left 0.3s ease;*/
+
+    position: fixed;
+    left: -300px; /* Sidebar is hidden initially */
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    transition: left 0.5s ease-in;
+}
+.display_toggle_off{
+    left: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 100;
+    transition: left 0.5s ease-out;
+
+}
+.sidebar_main {
+    height: calc(100vh - 8vh);
+    width: clamp(10rem, 15rem, 18rem);
+    overflow-x: hidden;
+    background-color: #121212;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+a{
+    text-decoration: none;
+}
+
+.sidebarMenuItem {
+    padding: 0.5rem;
+    color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.hrLine {
+    margin-top: 5px;
+    border-bottom: 1px solid #525252;
+}
+
+.sidebarMenuItem i {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    align-items: center;
+}
+
+.sidebarMenuItem:hover {
+    background-color: #2e2c2b;
+    border-radius: 10px;
+}
+
+.MUIIcon {
+    margin-left: 0.5rem;
+    color: #f2f2f2;
+}
+
+.sidebarMenuItem:hover .MUIIcon {
+    background-color: #2e2c2b;
+}
+
+.sidebarMenuItem:hover i {
+    background-color: #2e2c2b;
+}
+
+.addVideoButton {
+    border: 1px solid #525252;
+    width: max-content;
+    padding: 0.5rem;
+    color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.addVideoButton i {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+.addVideoButton:hover {
+    background-color: #2e2c2b;
+}
+
+.addVideoIcon {
+    margin-left: 0.5rem;
+}
+
+.addVideoButton:hover .addVideoIcon {
+    background-color: #2e2c2b;
+}
+
+.addVideoButton:hover i {
+    background-color: #2e2c2b;
+}
+
+.youtubeMoreBottom {
+    padding: 0.5rem;
+    color: #f2f2f2;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.youtubeMoreOption {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.youtubeMoreOption img {
+    margin-right: 5px;
+    width: 1rem;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #121212;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2e2c2b;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #121212;
+}

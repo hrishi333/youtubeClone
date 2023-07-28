@@ -1,0 +1,52 @@
+.description_main{
+   display: flex;
+    flex-direction: column;
+    background-color: #272727;
+    color: #f2f2f2;
+    border-radius: 10px;
+    padding:0.8rem;
+}
+
+.ViewsTimeLine{
+    display: flex;
+}
+
+.ViewsTimeLine p{
+    padding-right: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.description_section{
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+}
+
+.description{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.full {
+    -webkit-line-clamp: initial;
+    overflow: visible;
+}
+
+.show-more {
+    padding-top: 0.5rem;
+    background: none;
+    border: none;
+    color: #f2f2f2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+pre{
+    font-family: inherit;
+    text-align: justify;
+    max-width: content-box;
+    text-wrap: wrap;
+}

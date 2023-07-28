@@ -1,0 +1,46 @@
+.videolist_main {
+    margin: 0.5rem;
+    margin-right: 1rem;
+}
+
+.videolist_card {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.videolist_card p {
+    font-size: 14px;
+}
+
+.imageCard {
+    width: 10rem;
+    height: 6rem;
+}
+
+.videolist_card img {
+    margin-right: 0.5rem;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.videoDetails {
+    margin-left: 0.5rem;
+    width: 60%;
+    color: #f2f2f2;
+    text-wrap: normal;
+}
+
+.videoTitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #f2f2f2;
+    margin-bottom: 0.5rem;
+}
+
+.videoChannel, .videoViewsTime {
+    font-size: 0.9rem;
+    color: #626262;
+}

@@ -1,0 +1,52 @@
+.video-card {
+    padding: 0.5rem;
+    width: 333px;
+}
+
+.thumbnail {
+
+}
+.thumbnail img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.details {
+    display: flex;
+}
+
+.channel-profile {
+    padding: 0.5rem;
+    padding-left: 0;
+}
+
+.channel-profile img{
+    width: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #343434;
+}
+
+.channel-info {
+    margin-top:0.5rem;
+    margin-start:0.5rem;
+    color:#f2f2f2;
+    width: 100%;
+}
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    text-overflow: revert;
+    margin-bottom: 0.4rem;
+}
+.channel{
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+    color: #787878;
+}
+.views{
+    font-size: 0.8rem;
+    color: #787878;
+}

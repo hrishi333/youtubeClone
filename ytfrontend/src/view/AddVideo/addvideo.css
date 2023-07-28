@@ -1,0 +1,69 @@
+.addVideo_main {
+    height: calc(100vh - 8vh);
+    color: #f2f2f2;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.addVideo_card {
+    margin: 1rem;
+    display: flex;
+    color: #f2f2f2;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #121212;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 2);
+}
+
+.addVideo_card h1 {
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.inputGroup label {
+    padding-bottom: 0.5rem;
+}
+
+.inputGroup input, textarea {
+
+    padding: 0.5rem;
+    color: #f2f2f2;
+    background-color: inherit;
+    border: 1px solid #525252;
+}
+
+.addVideo_card button {
+    background-color: inherit;
+    color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.addVideo_card button:hover {
+    background-color: #525252;
+}
+
+.preview_section{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.image_preview img{
+    width: 200px;
+    object-fit: cover;
+}
+
+.video_preview video{
+    width: 300px;
+}
+

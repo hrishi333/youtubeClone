@@ -1,0 +1,40 @@
+.playerpage_main{
+    margin-right:auto;
+    margin-left:auto;
+    width: 90%;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.playerpage_main::-webkit-scrollbar {
+    display: none;
+}
+
+.videoplayerpart{
+    width: 65%;
+    padding: 0.7rem;
+}
+
+.videolistpart{
+   width:35%;
+}
+
+@media (max-width: 600px) {
+    /* CSS rules for small screens */
+
+    .videoplayerpart{
+        width: 100%;
+    }
+    .videolistpart{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1080px){
+    .playerpage_main{
+        width: 100%;
+        flex-direction: column;
+        margin:0.4rem;
+
+    }
+}

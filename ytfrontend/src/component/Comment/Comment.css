@@ -1,0 +1,92 @@
+
+.Comment_main{
+    margin-top:1rem;
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+}
+.hrLine {
+    margin-top: 5px;
+    border-bottom: 1px solid #525252;
+}
+
+.comment_input{
+    display: flex;
+    align-items: start;
+}
+
+.comment_input img{
+    width: 40px;
+    margin:0.5rem;
+    margin-left:0;
+    border-radius:50px;
+}
+.comment_input_field {
+    width: 100%;
+    margin-top:1rem;
+}
+.comment_input_field textarea{
+    width: 100%;
+    background-color: inherit;
+    color: #f2f2f2;
+    border:none;
+    font-family: inherit;
+    height: max-content;
+}
+.button_group{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.btnSecondary{
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    background-color: #0f0f0f;
+    color: #2d2d2d;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+}
+
+.btnSecondary:hover{
+    color:#f2f2f2;
+}
+
+.all_comments{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.all_comments img{
+    width: 40px;
+    margin:0.5rem;
+    margin-left:0;
+    border-radius:50px;
+}
+
+.user_name{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color:#f2f2f2;
+}
+.comment_time{
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    color: #676767;
+}
+.user_comment{
+    font-size: 0.9rem;
+    color: #f2f2f2;
+}
+
+.deleteButton{
+    font-size: 20px;
+    margin-left: 2rem;
+    color: #525252;
+    align-items: end;
+}
