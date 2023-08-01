@@ -71,17 +71,18 @@ const SignUp = () => {
                 email,
                 password,
             }).then((res)=>{
-                console.log(res)
+                if(res.status===200){
+
+                    toast.info("Sign Up is successfull", toastOptions);
+                    setTimeout(() => {
+                        navigate('/signin');
+                    }, 3000)
+                }
             }).catch((e)=>{
-                console.log(e)
+                toast.error(`${e.response.data.message}`,{theme:"dark",position:'top-center'});
             })
-/*
-            console.log(response.data);
-*/
-            toast.info("Sign Up is successfull", toastOptions);
-            setTimeout(() => {
-                navigate('/signin');
-            }, 3000)
+
+
         } catch (e) {
             console.log(e);
             toast.error("Error! check your informations", errorToastOptions)

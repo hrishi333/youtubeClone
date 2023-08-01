@@ -53,33 +53,40 @@ const AddVideo = () => {
 
     const send = async (e) => {
         e.preventDefault();
+
         const data = new FormData();
         data.append("title", title);
         data.append("description", description);
         data.append("image", image);
         data.append("file", file);
+
         /*   data.forEach((value, key) => {
                console.log(key, value);
            });
-   */
-        const res = await axios.post(`${baseUrl}/videos`, data,
-            {
-                headers: {
-                    ' Content-Type': 'multipart/form-data',
-                    'access_token': `${accessToken}` // Set the cookie here
+         */
+        if(title && image && file ){
+            const res = await axios.post(`${baseUrl}/videos`, data,
+                {
+                    headers: {
+                        ' Content-Type': 'multipart/form-data',
+                        'access_token': `${accessToken}` // Set the cookie here
+                    }
                 }
+            );
+            if (res.status === 200 && res.statusText) {
+
+                toast.info("Video is uploaded  successfully", beingProcessedVideoOptions);
+                setTimeout(() => {
+                    navigate('/videopage');
+                }, 3000)
+                console.log(res);
+
+            } else {
+                toast.error("Something went wrong.", anErrorOptions)
             }
-        );
-        if (res.status === 200 && res.statusText) {
 
-            toast.info("Video is uploaded  successfully", beingProcessedVideoOptions);
-            setTimeout(() => {
-                navigate('/videopage');
-            }, 3000)
-            console.log(res);
-
-        } else {
-            toast.error("Something went wrong.", anErrorOptions)
+        }else{
+            toast.error('plese fill all required data',{theme:"dark",position:"top-center"});
         }
 
     }

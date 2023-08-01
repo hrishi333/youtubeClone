@@ -31,17 +31,17 @@ const UserEdit = () => {
         const data = new FormData();
         data.append("name", nameInput);
         data.append("about", descInput);
-         const res = await editUserDetails(currentUser.user._id, data, currentUser.token);
+        const res = await editUserDetails(currentUser.user._id, data, currentUser.token);
 
 
-         if (res.status === 200 && res.statusText) {
-             toast("user updated successfully", toastOptions);
-             console.log(res.data);
-             //dispatch(loginSuccess(res.data));
+        if (res.status === 200 && res.statusText) {
+            toast("user updated successfully", toastOptions);
+            console.log(res.data);
+            //dispatch(loginSuccess(res.data));
 
-         } else {
-             toast.error("Something went wrong.",)
-         }
+        } else {
+            toast.error("Something went wrong.",)
+        }
     }
 
     const handleUploadImage = async () => {
@@ -51,7 +51,6 @@ const UserEdit = () => {
         const res = await editUserProfile(imgData, currentUser.token);
         console.log(res);
     }
-
 
 
     return (
@@ -109,11 +108,13 @@ const UserEdit = () => {
                             />
                         </div>
 
-                        <p>subscribers:{currentUser.user.subscribedUsers.length}</p>
                         <button className="buttonFill" onClick={async () => {
                             await handleSubmit();
                         }}>Save
                         </button>
+
+                        <p>subscribers:{currentUser.user.subscribedUsers.length}</p>
+                        <p>email:{currentUser.user.email}</p>
                     </div>
                 </div>
 

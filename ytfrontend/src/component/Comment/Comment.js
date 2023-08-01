@@ -73,6 +73,7 @@ const Comment = () => {
     }, [refresh,currentUser])
 
     return (
+
         <div className='Comment_main' style={{}}>
             <p>2249 Comments</p>
             <div className='comment_input'>
@@ -94,7 +95,7 @@ const Comment = () => {
                 </div>
             </div>
 
-            {commentsList?.filter((item, index) => (showMore) ? index <= 3 : index).map((item, index) => (
+            {commentsList?.filter((item, index) => (showMore===false) ? index <= 4 : index).map((item, index) => (
                 <div key={item._id} className='all_comments' id={'showMoreLess'}>
 
                     <img src={item.userId.profile_image} alt='Channel'/>

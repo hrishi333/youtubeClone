@@ -18,9 +18,12 @@ const ChannelSub = () => {
     return (
         <>
             <div className="user_edit_main">
-               <p>Subscribed Channels Videos</p>
+               <p>Subscribed Channels</p>
                 <div className="channel_list_container">
-
+                    <div className="channel_profile">
+                        <img src={"assets/images/JohnyDepp.jpeg"} alt={"channel profile"}/>
+                        <p>Channel Name</p>
+                    </div>
                 </div>
             </div>
         </>

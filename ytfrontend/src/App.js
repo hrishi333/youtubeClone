@@ -47,7 +47,8 @@ function App() {
                         <Route path='/' element={<Home/>}/>
                         <Route path='/signin' element={<SignIn/>}/>
                         <Route path='/signup' element={<SignUp/>}/>
-                        <Route path='/videopage' element={<VideoPage/>}/>
+                        <Route path='/videopage' element={<VideoPage suffixUrl={"random"} />}/>
+                        <Route path='/trending' element={<VideoPage suffixUrl={"trends"}/>}/>
                         <Route path='/player' element={<VideoPlayer/>}/>
                         <Route path='/addvideo' element={<AddVideo/>}/>
 

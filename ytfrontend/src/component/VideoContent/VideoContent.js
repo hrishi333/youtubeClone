@@ -67,7 +67,7 @@ const VideoContent = () => {
         await getChannelData();
         if (channelData && channelData != null) {
             const subArray = channelData.data.subscribers;
-            const prevSubscribed = subArray.includes(currentUser.user._id); // check previously subscribed returns true/false
+            const prevSubscribed = subArray.includes(currentUser.user._id);// check previously subscribed returns true/false
             setSubscribeValue(prevSubscribed);
         } else {
             console.log('channelData is empty');
@@ -94,7 +94,6 @@ const VideoContent = () => {
         const res = await subscribeChannel(currentVideo.data.data.userId._id, currentUser.token);
         if (res.status === 200) {
             setSubscribeValue(true);
-            console.log(channelData);
         }
     }
     const handleUnsubscribe = async () => {
@@ -102,7 +101,6 @@ const VideoContent = () => {
         if (res.status === 200) {
             setSubscribeValue(false);
             getChannelData();
-            console.log(channelData);
         }
     }
 
@@ -116,11 +114,11 @@ const VideoContent = () => {
         }
     }
 
-    const handleVideoPlay=async ()=>{
+    const handleVideoPlay = async () => {
         const res = await addViewOnVideo(currentVideo.data.data._id);
-        if(res.status===200){
+      /*  if (res.status === 200) {
             console.log('view added');
-        }
+        }*/
     }
 
     useEffect(() => {
@@ -154,18 +152,26 @@ const VideoContent = () => {
     const subscribeCount = useMemo(() => {
         getChannelData();
         return (
-            <span>{ channelData?.data?.subscribers?.length } Subscribers</span>
+            <span>{channelData?.data?.subscribers?.length} Subscribers</span>
         )
     }, [subscribeValue]);
 
     return (
         <>
             <div className='content_main'>
-                <div className="video_container">
-                    <iframe allowFullScreen
-                            style={{margin: 0, padding: 0}}
-                            src={currentVideo.data.data.videoUrl}/>
-                </div>
+              {/*  <iframe allowFullScreen
+                        style={{margin: 0, padding: 0}}
+                        src={currentVideo?.data.data.videoUrl}/>*/}
+
+                {/*  video  tag not support for rudux change  */}
+                    <video  controls>
+                        <source allowFullScreen
+                                style={{margin: 0, padding: 0}}
+                                src={currentVideo?.data.data.videoUrl}/>
+                        your browser not support video
+                    </video>
+
+
                 <p>{currentVideo.data.data.title}</p>
                 <div className='channel_info'>
                     <div className='combine_button'>

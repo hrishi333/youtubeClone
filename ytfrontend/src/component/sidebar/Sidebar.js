@@ -14,6 +14,7 @@ import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined
 import LiveTvOutlinedIcon from '@mui/icons-material/LiveTvOutlined';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import {Link, useNavigate} from 'react-router-dom';
 import {useDispatch} from "react-redux";
 import {logout} from "../../redux/userSlice";
@@ -36,10 +37,10 @@ const Sidebar = () => {
         navigate('/signin');
     }
 
- /*   const userData =async ()=>{
-        const res = await getUserById(currentUser.user._id);
-        console.log(res);
-    }*/
+    /*   const userData =async ()=>{
+           const res = await getUserById(currentUser.user._id);
+           console.log(res);
+       }*/
 
     useEffect(() => {
         const a = window.innerWidth;
@@ -94,6 +95,13 @@ const Sidebar = () => {
                     <i>< ExploreOutlinedIcon style={{fontSize: '1.5rem'}} className="MUIIcon"/></i>
                     Explore
                 </div>
+                <Link to='/trending'>
+                    <div className='sidebarMenuItem'>
+                        <i>< LocalFireDepartmentIcon style={{fontSize: '1.5rem'}} className="MUIIcon"/></i>
+                        Trending
+                    </div>
+                </Link>
+
                 <div className='sidebarMenuItem'>
                     <i>< MovieFilterOutlinedIcon style={{fontSize: '1.5rem'}} className="MUIIcon"/></i>
                     Shorts

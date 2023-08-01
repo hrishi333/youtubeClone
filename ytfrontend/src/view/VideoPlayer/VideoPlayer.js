@@ -10,11 +10,20 @@ import {TailSpin} from "react-loader-spinner";
 const VideoPlayer = () => {
     // const {currentVideo}= useSelector(state => state.video);
     const [showLoader, setShowLoader] = useState(true);
+    const [refresh, setRefresh] = useState(false);
+
+    // function for loading whole page after changing video in video list
+    const toggleRefresh = ()=>{
+        setRefresh(!refresh);
+        setShowLoader(true);
+    }
+
     useEffect(() => {
         setTimeout(() => {
             setShowLoader(false);
-        }, 3000);
-    })
+        }, 1000);
+        console.log(refresh,"toggle");
+    },[refresh])
 
     return (
         <div className='playerpage_main'>
@@ -34,7 +43,7 @@ const VideoPlayer = () => {
                     <Comment/>
                 </div>
                 <div className='videolistpart'>
-                    <VideoList/>
+                    <VideoList toggleRefresh={toggleRefresh}/>
                 </div>
             </>}
 
