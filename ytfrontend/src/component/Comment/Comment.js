@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import './Comment.css'
-import axios from "axios";
-import {config} from "../../config/config";
 import {useSelector} from "react-redux";
 import {addComment, getAllCommentsOnVideo, deleteComment} from "../../Actions/commentApi";
 import timesAgo from "../../reuseables/timesAgo";
@@ -95,7 +93,7 @@ const Comment = () => {
                 </div>
             </div>
 
-            {commentsList?.filter((item, index) => (showMore===false) ? index <= 4 : index).map((item, index) => (
+            {commentsList?.filter((item, index) => (showMore) ? index <= 3 : index).map((item, index) => (
                 <div key={item._id} className='all_comments' id={'showMoreLess'}>
 
                     <img src={item.userId.profile_image} alt='Channel'/>

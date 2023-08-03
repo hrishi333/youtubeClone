@@ -23,7 +23,7 @@ const AddVideo = () => {
     const [imagePreview, setImagePreview] = useState(null);
     const [videoPreview, setVideoPreview] = useState(null);
 
-    const accessToken = cookies.get('access_token');
+    const accessToken = currentUser.token;
 
     const beingProcessedVideoOptions = {
         className: "toast-position",

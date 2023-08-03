@@ -5,7 +5,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import {editUserDetails, editUserProfile, getUserById} from "../../Actions/userApi";
 import {toast} from "react-toastify";
 import {useNavigate} from 'react-router-dom';
-import {loginSuccess} from "../../redux/userSlice";
+import {loginSuccess, updateUserProfile} from "../../redux/userSlice";
 
 const UserEdit = () => {
     const {currentUser} = useSelector(state => state.user);
@@ -37,7 +37,7 @@ const UserEdit = () => {
         if (res.status === 200 && res.statusText) {
             toast("user updated successfully", toastOptions);
             console.log(res.data);
-            //dispatch(loginSuccess(res.data));
+            dispatch(updateUserProfile(res.data));
 
         } else {
             toast.error("Something went wrong.",)
@@ -56,11 +56,16 @@ const UserEdit = () => {
     return (
         <>
             <div className="user_edit_main">
+
                 <div className={"user_info"}>
+
                     <div className="image_container">
+                        <p style={{marginBottom: "1rem"}}>Change Profile Image</p>
+
                         <img src={currentUser.user.profile_image} alt={"profile image"}/>
                         <div className="inputGroup">
-                            <label htmlFor={"imageInput"}>Reset Image</label>
+                            <label htmlFor={"imageInput"}>Reset Image <span
+                                style={{fontSize: "10px"}}>(1*1 recomended)</span></label>
                             <input id={"imageInput"}
                                    type="file"
                                    name={"profile_image"}
@@ -70,7 +75,8 @@ const UserEdit = () => {
                                    }}/>
                         </div>
                         <div className='inputGroup'>
-                            {imageInput && <><p>Preview</p>
+                            {imageInput && <>
+                                <p>Preview</p>
                                 <img style={{marginBottom: "1rem"}} src={URL.createObjectURL(imageInput)}
                                      alt={'preview image'}/>
                                 <button className="buttonFill" onClick={() => {
@@ -80,6 +86,8 @@ const UserEdit = () => {
                             </>}
                         </div>
                     </div>
+                </div>
+                <div className={"user_info"}>
                     <div className='info_container'>
                         <div className="inputGroup">
                             <label htmlFor="userChannelName">Channel Name&nbsp;
