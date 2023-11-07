@@ -7,6 +7,13 @@ and React js , CSS , material icons for frontend....
 The app supports video Crud operations and like , subscribe , dislike , comment and some basic features as like youtube 
 ...
 
+##SCREENSHOTS
+Video List Page
+![Screenshot from 2023-11-04 15-15-08](https://github.com/hrishi333/youtubeClone/assets/59025986/8dc8c9d1-8b4a-42d5-bb63-8ccd7e55c21c)
+Video Player Page
+![Screenshot from 2023-11-04 15-16-33](https://github.com/hrishi333/youtubeClone/assets/59025986/fdeb0011-508b-4bf8-9447-a04e29413890)
+
+
 ## Installation
 
 To install this project, follow these steps...
